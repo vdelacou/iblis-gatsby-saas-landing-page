@@ -18,7 +18,10 @@ jobs:
           npm run build
       - name: Check Lint
         run: npm run lint
-      - name: Deploy
-        uses: enriikke/gatsby-gh-pages-action@v2
+      - name: Deploy to GitHub Pages
+        uses: Cecilapp/GitHub-Pages-deploy@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
+          email: vincent.delacourt+github@outlook.com
+          build_dir: public
