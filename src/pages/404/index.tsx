@@ -4,8 +4,8 @@ import { useIntl } from 'gatsby-plugin-intl';
 import React, { FC, PropsWithChildren } from 'react';
 import { NotFound } from '../../components/not_found';
 import { Seo } from '../../components/seo';
-import { useGetImages } from './useGetImages';
-import { useSiteMetadata } from './useSiteMetadata';
+import { useGetImages } from './_useGetImages';
+import { useSiteMetadata } from './_useSiteMetadata';
 
 const Page: FC<PageRendererProps> = (props: PropsWithChildren<PageRendererProps>) => {
   const { location } = props;
