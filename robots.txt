@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: http://localhost:8000/sitemap.xml
-Host: localhost:8000
+Sitemap: https://vdelacou.github.io/sitemap.xml
+Host: https://vdelacou.github.io

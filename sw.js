@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-bd1f1efaad7a909739ad.js"
+    "url": "webpack-runtime-5ff5778d8a6c5ab66f89.js"
   },
   {
     "url": "framework-dbb498007a7447f28d8e.js"
   },
   {
-    "url": "app-89da7451d8e2c344b9c2.js"
+    "url": "app-7ca53ebb6831a07d42df.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "9d900c50b60c4b104a8a5b23b7875489"
+    "revision": "4f31c6f116e6ec39ad1bdf5b3e09628e"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -52,11 +52,19 @@ self.__precacheManifest = [
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-16703ee5599528db9f93.js"
   },
   {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "cc0b8525c0723da6b5969d506c993044"
+  },
+  {
+    "url": "page-data/app-data.json",
+    "revision": "ef8d1cd3bf2a360b7cf64b01e0258961"
+  },
+  {
     "url": "polyfill-9e9c796164da25fa8bfb.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "d25f66f1cde6af43c8f734ea0f0fda67"
+    "revision": "893973ba3322afc1b057619b143e9fb9"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -143,12 +151,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/iblis-gatsby-saas-landing-page`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-89da7451d8e2c344b9c2.js`))) {
+  if (!resources || !(await caches.match(`/iblis-gatsby-saas-landing-page/app-7ca53ebb6831a07d42df.js`))) {
     return await fetch(event.request)
   }
 
@@ -161,7 +169,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/iblis-gatsby-saas-landing-page/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
