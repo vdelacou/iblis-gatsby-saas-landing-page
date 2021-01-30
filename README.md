@@ -26,7 +26,7 @@ Follow here `https://gist.github.com/vdelacou/58484f1c11af70aaa457f4e5c289e893#f
 
 ### Add the dependency
 
-`npm install --save-dev @types/node @types/react @types/react-dom @types/react-helmet gatsby-plugin-manifest gatsby-plugin-nprogress gatsby-plugin-offline gatsby-plugin-react-helmet gatsby-plugin-robots-txt gatsby-plugin-sharp gatsby-plugin-sitemap gatsby-source-filesystem gatsby-theme-material-ui gatsby-transformer-sharp typescript eslint-loader`
+`npm install --save-dev @types/node @types/react @types/react-dom @types/react-helmet gatsby-plugin-manifest gatsby-plugin-nprogress gatsby-plugin-offline gatsby-plugin-react-helmet gatsby-plugin-robots-txt gatsby-plugin-sharp gatsby-plugin-sitemap gatsby-source-filesystem gatsby-theme-material-ui gatsby-transformer-sharp typescript@4.0.5 eslint-loader`
 
 ### Add the scripts to `package.json`
 
