@@ -4,6 +4,9 @@ const siteUrl = process.env.SITE_URL || 'http://localhost:8000/';
 module.exports = {
   plugins: [
     {
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+    },
+    {
       resolve: 'gatsby-plugin-offline',
     },
     {
@@ -30,15 +33,6 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-intl',
-      options: {
-        path: `${__dirname}/src/i18n`,
-        languages: ['en', 'fr'],
-        defaultLanguage: 'en',
-        redirect: false,
       },
     },
     {
