@@ -1,3 +1,3 @@
-import index from './index/index';
+import index from './home/index';
 
 export default index;
